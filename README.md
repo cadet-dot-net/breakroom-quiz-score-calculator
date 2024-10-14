@@ -16,5 +16,5 @@ Task Breakdown:
   - [x] `hourly_rate >= minimum_wage`
 
 ## Tests
-- [ ] all values are assigned points correctly
-- [ ] missing values in file are not assigned points
+- [x] all values are assigned points correctly
+- [x] missing values in file are not assigned points
