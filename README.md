@@ -7,13 +7,13 @@ Context:
 Task Breakdown:
 - [x] parse given JSON file to get each data point as a response_name: value pair
 - [x] store fixed data for minimum wages by date
-- [ ] increment total points based on each found data point pair
-  - [ ] `enjoys_job: "yes"`
-  - [ ] `respected_by_managers: "yes"`
-  - [ ] `good_for_carers: "yes`
-  - [ ] `hours_actually_worked < contracted_hours + 8`
-  - [ ] `unpaid_extra_work: "no"`
-  - [ ] `hourly_rate >= minimum_wage`
+- [x] increment total points based on each found data point pair
+  - [x] `enjoys_job: "yes"`
+  - [x] `respected_by_managers: "yes"`
+  - [x] `good_for_carers: "yes`
+  - [x] `hours_actually_worked < contracted_hours + 8`
+  - [x] `unpaid_extra_work: "no"`
+  - [x] `hourly_rate >= minimum_wage`
 
 ## Tests
 - [ ] all values are assigned points correctly
