@@ -10,4 +10,16 @@ defmodule MinimumWages do
     1_680_307_200_000 => %{0 => 5.28, 18 => 7.49, 21 => 10.18, 23 => 10.42},
     1_711_929_600_000 => %{0 => 6.40, 18 => 8.60, 21 => 11.44}
   }
+
+  def minimum_wage(submitted_date, submitted_age) do
+    wages_for_date(submitted_date)
+    |> Enum.sort(:desc)
+    |> Enum.find_value(fn {age, wage} -> if submitted_age >= age, do: wage end)
+  end
+
+  defp wages_for_date(submitted_date) do
+    @minimum_wages_by_date
+    |> Enum.sort(:desc)
+    |> Enum.find_value(%{}, fn {date, wages} -> if submitted_date >= date, do: wages end)
+  end
 end
