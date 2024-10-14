@@ -1,6 +1,7 @@
-defmodule QuizScoreCalculatorTest do
+defmodule Mix.TaskQuizScoreCalculatorTest do
   use ExUnit.Case
   import ExUnit.CaptureIO
+  alias Mix.Tasks.QuizScoreCalculator
 
   @doc """
   {
@@ -16,7 +17,7 @@ defmodule QuizScoreCalculatorTest do
   """
   test "missing values in file are not assigned points" do
     assert capture_io(fn ->
-             QuizScoreCalculator.score("./test/quiz_responses/response_missing.json")
+             QuizScoreCalculator.run(["./test/quiz_responses/response_missing.json"])
            end) =~ "Score is 2/5 (40%)"
   end
 
@@ -35,7 +36,7 @@ defmodule QuizScoreCalculatorTest do
   """
   test "all values are assigned points correctly" do
     assert capture_io(fn ->
-             QuizScoreCalculator.score("./test/quiz_responses/response_100.json")
+             QuizScoreCalculator.run(["./test/quiz_responses/response_100.json"])
            end) =~ "Score is 5/5 (100%)"
   end
 end

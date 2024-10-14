@@ -1,5 +1,8 @@
 # QuizScoreCalculator
 
+## Usage
+Run `mix quiz_score_calculator <filename.json>` with a json file name passed as the parameter.
+
 ## Task breakdown
 Context:
 > The way we score the Breakroom quiz is by adding and withholding points for answers that we think are either good or bad. A response scores one point for having a positive answer, and does not gain that point for a negative answer. Missing answers do not contribute to the overall score.
